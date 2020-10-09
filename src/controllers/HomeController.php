@@ -2,19 +2,16 @@
 namespace src\controllers;
 
 use \core\Controller;
+use \src\models\Livro;
 
 class HomeController extends Controller {
 
     public function index() {
-        $this->render('home', ['nome' => 'Bonieky']);
+        $livros = Livro::select()->execute();
+        $this->render('home',[
+            'livros'=>$livros
+        ]);
     }
-
-    public function sobre() {
-        $this->render('sobre');
-    }
-
-    public function sobreP($args) {
-        print_r($args);
-    }
+   
 
 }
