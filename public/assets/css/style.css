@@ -1,0 +1,116 @@
+body {
+  overflow-X: hidden;
+  }
+
+.header{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+
+.header .header-center{
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.body .body-center{
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.cards{
+  width: 925px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.label-float{
+  position: relative;
+  padding-top: 13px;
+}
+
+.label-float input{
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  outline: none;
+  min-width: 250px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -webkit-appearance:none;
+}
+
+.label-float input:focus{
+  border: 2px solid #007BFF;
+}
+
+.label-float input::placeholder{
+  color:transparent;
+}
+
+.label-float label{
+  pointer-events: none;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 15px;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  background-color: white;
+  padding: 5px;
+  box-sizing: border-box;
+  color: rgb(167, 164, 164);
+}
+
+.label-float input:required:invalid + label:before{
+  content: '*';
+}
+
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label{
+  font-size: 13px;
+  top: -10px;
+  color: #007BFF;
+}
+
+.select{
+  width: 250px;
+  height: 45px;
+  padding: 5px;
+  border: 1px solid lightgrey;
+  color: rgb(78, 77, 77);
+  border-radius:5px;
+}
+.select:focus{
+  border: 2px solid #007BFF;
+}
+.btn-grande{
+  width: 250px;
+}
+
+.label-Title{
+  color: #007BFF;
+}
