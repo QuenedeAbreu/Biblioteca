@@ -14,7 +14,7 @@
           </h5>
         </div>
         <div class="card-body text-primary">
-          <p class="card-text">Editora: <?= $acervo['editoraNome'];?></p>
+          <p class="card-text">Editora: <?= $acervo['nome'];?></p>
           <p class="card-text">Ano: <?= $acervo['ano'];?></p>
           <p class="card-text">Autor: <?= $acervo['autor'];?></p>
         </div>

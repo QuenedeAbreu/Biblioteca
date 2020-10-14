@@ -12,16 +12,18 @@ class HomeController extends Controller {
         if(!empty($_GET['pesquisa'])){
             $pesquisa=trim($_GET['pesquisa']);
 
-            $acervo = Acervo::select('acervos.*,editoras.nome as editoraNome')
+            $acervo = Acervo::select('acervos.*,editoras.*')
             ->join('editoras','editoras.id','=','acervos.idEditora')
             ->where('titulo','like','%'.$pesquisa.'%')
             ->get();
         }else{
-    
-       $acervo = Acervo::select('acervos.*,editoras.nome as editoraNome')
-      ->join('editoras','editoras.id','=','acervos.idEditora')
-      ->get();
-    }
+            
+            
+            $acervo = Acervo::select('acervos.*,editoras.*')
+            ->join('editoras','editoras.id','=','acervos.idEditora')
+            ->get();
+    }   
+  
 
        $this->render('home',[
            'acervos' =>$acervo
