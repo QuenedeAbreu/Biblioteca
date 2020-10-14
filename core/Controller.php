@@ -27,8 +27,8 @@ class Controller {
            // $render = fn($vN, $vD = []) => $this->renderPartial($vN, $vD);
            $render = function ($vN, $vD = []) {
             return $this->renderPartial($vN, $vD);
-            }; 
-           $base = $this->getBaseUrl();
+            };
+            $base = $this->getBaseUrl();
             require '../src/views/'.$folder.'/'.$viewName.'.php';
         }
     }

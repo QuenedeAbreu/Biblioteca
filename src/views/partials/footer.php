@@ -1,6 +1,9 @@
-<footer>
-<hr/>
-<h4>Todos os direitos reservados!</h4>
-</footer>
+<div class="body">
+  <div class="body-center">
+   <footer>
+      Todos os direitor reservados!
+    </footer>
+  </div>
+</div>
   </body>
 </html>
