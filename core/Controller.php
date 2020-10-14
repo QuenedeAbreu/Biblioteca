@@ -17,8 +17,9 @@ class Controller {
             $base .= ':'.$_SERVER['SERVER_PORT'];
         }
         $base .= Config::BASE_DIR;
-        
+       
         return $base;
+        
     }
 
     private function _render($folder, $viewName, $viewData = []) {

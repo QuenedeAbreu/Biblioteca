@@ -17,6 +17,7 @@ class Model {
         if(self::$_h == null) {
             $connection = Database::getInstance();
             self::$_h = new Builder('mysql', function($query, $queryString, $queryParameters) use($connection) {
+                $queryString = str_replace("`*`","*",$queryString);
                 $statement = $connection->prepare($queryString);
                 $statement->execute($queryParameters);
 
